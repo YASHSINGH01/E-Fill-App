@@ -1,0 +1,57 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '11.0'
+
+target 'Efill' do
+  
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
+  
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+
+  
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods 
+
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+
+
+  pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
+  pod 'Permission-Camera', :path => '../node_modules/react-native-permissions/ios/Camera.podspec'
+
+  pod 'react-native-background-timer', :path => '../node_modules/react-native-background-timer'
+
+  pod 'RNCCheckbox', :path => '../node_modules/@react-native-community/checkbox'
+
+  target 'EfillTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  use_flipper!
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
+    flipper_post_install(installer)
+  end
+end
+
+target 'Efill-tvOS' do
+  # Pods for Efill-tvOS
+
+  target 'Efill-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end

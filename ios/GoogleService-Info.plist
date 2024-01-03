@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>763128769510-q4jrkebo7ig6oc9s3ul79jk8t9tr96sg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.763128769510-q4jrkebo7ig6oc9s3ul79jk8t9tr96sg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDp0jzaP521dTog_HQX2tphSgoAERavAXA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>763128769510</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.efill</string>
+	<key>PROJECT_ID</key>
+	<string>efev-charging-solutions</string>
+	<key>STORAGE_BUCKET</key>
+	<string>efev-charging-solutions.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:763128769510:ios:407899e7e0d45920b34427</string>
+	<key>DATABASE_URL</key>
+	<string>https://efev-charging-solutions-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
